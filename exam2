@@ -4,17 +4,19 @@ public class DataStructures {
           if (n<=0) {
                return 0;
           }
-          return 0 + recursiveSum (n - 1);
+          return n + recursiveSum (n - 1);
       }
       public static int findMax(int[] arr) {
           if (arr == null || arr.length == 0) {
                throw new IllegalArgumentException("Array must not be empty"); 
           }
+          int max = arr[0];
           for (int i = 1; i < arr.length; i++) {
                if (arr[i] > max) {
                     max = arr[i];
                }
-               return max;
+          }
+          return max;
           }
        static class Node {
        int value;
@@ -36,6 +38,7 @@ public class DataStructures {
                if (arr[i] == target) {
                     return i; // Target found at index i
                }
+          }
           return -1;
       }
       public static void bubbleSort(int[] arr) {
