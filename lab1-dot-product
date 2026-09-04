@@ -1,0 +1,20 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class ArrayMultiplication {
+    public static void main(String[] args) {
+        int n = 5;
+        int[] a = new int[n];
+        int[] b = new int[n];
+        int[] c = new int[n];
+        Random random = new Random();
+        for (int i = 0; i < n; i++) {
+            a[i] = random.nextInt(20) + 1; 
+            b[i] = random.nextInt(20) + 1;
+            c[i] = a[i] * b[i];
+        }
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
+        System.out.println(Arrays.toString(c));
+    }
+}
