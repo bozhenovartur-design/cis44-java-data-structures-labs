@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class cal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double result = scanner.nextDouble();
+        System.out.println(result);
+        while (true) {
+            String operator = scanner.next();
+            double nextNum = scanner.nextDouble();
+            if (operator.equals("+")) {
+                result = result + nextNum;
+            } else if (operator.equals("-")) {
+                result = result - nextNum;
+            } else if (operator.equals("*")) {
+                result = result * nextNum;
+            } else if (operator.equals("/")) {
+                result = result / nextNum;
+            } else {
+                return;
+            }
+            System.out.println(result);
+        }
+    }
+}
